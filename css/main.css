@@ -382,16 +382,20 @@ ul, ol {
     margin-bottom: 30px;
   }
 
-  .contact-us span {
-    padding: 8px 47px;
+  .contact-us input[type="submit"] {
+    display: table;
+    padding: 0;
+    width: 140px;
+    height: 40px;
+    box-shadow: 0 0 0;
     background-color: #ACDACF;
     color: #fff;
     cursor: pointer;
     margin: 0 auto;
-    display: table;
+    border: none;
   }
 
-  .contact-us span:hover {
+  .contact-us input[type="submit"]:hover {
     background-color: #9dc6bc;
   }
   .contact-us label[for="msg"] {
