@@ -288,6 +288,141 @@ ul, ol {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
 
+    .mapHolder {
+      margin-bottom: 55px;
+    }
+
+     .overMapElement {
+      background-color: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 450px;
+      position: absolute;
+      z-index: 4;
+      top: 168px;
+      cursor: pointer;
+    }
+
+     .overMapElement span{
+      color: #fff;
+      font-size: 30px;
+      margin: 0 auto;
+      display: table;
+      transform: translateY(195px)
+    }
+
+     .overMapElement::before {
+      content: " ";
+      display: inline-block;
+      width: 80px;
+      height: 30px;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      position: absolute;
+      top: 165px;
+    }
+    .overMapElement::after {
+      content: " ";
+      display: inline-block;
+      width: 80px;
+      height: 30px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      position: absolute;
+      top: 230px;
+    }
+    .overMapElement:hover::before {
+     transition: .5s;
+     width: 100px;
+     height: 50px;
+     top: 145px;
+   }
+    .overMapElement:hover::after {
+     transition: .5s;
+     width: 100px;
+     height: 50px;
+     top: 250px;
+   }
+
+   .contact {
+     margin-bottom: 70px;
+   }
+
+   .contact h3 {
+     margin-bottom: 50px;
+   }
+
+   .contact-title {
+     text-transform: uppercase;
+     font-size: 30px;
+     margin: 0 auto;
+     display: table;
+   }
+
+   .contact-title::after{
+    content: "";
+    width: 94px;
+    height: 5px;
+    display: block;
+    background: url(../img/decoration-line.png);
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 70px;
+  }
+
+  .contact-us {
+    margin-bottom: 30px;
+  }
+
+  .contact-us label {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .contact-us input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .contact-us span {
+    padding: 8px 47px;
+    background-color: #ACDACF;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+    display: table;
+  }
+
+  .contact-us span:hover {
+    background-color: #9dc6bc;
+  }
+  .contact-us label[for="msg"] {
+    display: block;
+  }
+  .contact-us textarea[name="msg"] {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .contact-social h3 {
+    margin-bottom: 21px;
+  }
+
+  .contact-info {
+    margin-bottom: 50px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+  
+  .contact i {
+    font-size: 18px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 1px;
+  }
+  
 .frame {
   position: relative; }
   .frame:before, .frame:after {
@@ -438,7 +573,23 @@ ul, ol {
 
 @media (max-width: 417px) {
   .products-holder .col-xs-6 {
-    width: 100%; } }
+    width: 100%; } 
+    .overMapElement {
+      height: 458px;
+      top: 90px; }
+      .overMapElement::before {
+        left: 55px;
+    }    
+      .overMapElement::after {
+        right: 55px;
+    }    
+      .overMapElement:hover::before {
+        left: 45px;
+    }    
+      .overMapElement:hover::after {
+        right: 45px;
+    }    
+  }
 @media (min-width: 400px) {
   .main-header .navbar .navbar-toggle {
     margin-right: 15px; }
@@ -451,7 +602,37 @@ ul, ol {
     font-size: 16px; }
 
   .collections-holder a {
-    font-size: 26px; } }
+    font-size: 26px; }
+    .overMapElement {
+      height: 458px;
+      top: 90px; }
+      .overMapElement::before {
+        left: 55px;
+    }    
+      .overMapElement::after {
+        right: 55px;
+    }    
+      .overMapElement:hover::before {
+        left: 45px;
+    }    
+      .overMapElement:hover::after {
+        right: 45px;
+    }  
+    }
+@media (min-width: 500px) {
+      .overMapElement::before {
+        left: 135px;
+    }    
+      .overMapElement::after {
+        right: 135px;
+    }    
+      .overMapElement:hover::before {
+        left: 115px;
+    }    
+      .overMapElement:hover::after {
+        right: 115px;
+    }  
+    }
 @media (min-width: 768px) {
   .main-header .logo {
     width: 80px;
@@ -491,7 +672,23 @@ ul, ol {
     position: relative; }
 
   #back-to-top {
-    display: block; } }
+    display: block; }
+    .overMapElement {
+      height: 458px;
+      top: 168px; } 
+      .overMapElement::before {
+        left: 250px;
+    }    
+      .overMapElement::after {
+        right: 250px;
+    }    
+      .overMapElement:hover::before {
+        left: 230px;
+    }    
+      .overMapElement:hover::after {
+        right: 230px;
+    } 
+  }
 @media (min-width: 992px) {
   .main-header .logo {
     margin-top: 10px; }
@@ -556,7 +753,24 @@ ul, ol {
     padding: 25px 0; }
 
   #back-to-top {
-    bottom: 100px; } }
+    bottom: 100px; }
+    .overMapElement {
+      height: 458px;
+      top: 153px; }
+      .overMapElement::before {
+        left: 340px;
+    }    
+      .overMapElement::after {
+        right: 340px;
+    }    
+      .overMapElement:hover::before {
+        left: 320px;
+    }    
+      .overMapElement:hover::after {
+        right: 320px;
+    } 
+
+  }
 @media (min-width: 1200px) {
   .main-header .logo {
     width: 104px; }
@@ -593,7 +807,24 @@ ul, ol {
     padding: 35px 0; }
 
   #back-to-top {
-    bottom: 120px; } }
+    bottom: 120px; }
+    .overMapElement {
+      height: 458px;
+      top: 173px; }
+      .overMapElement::before {
+        left: 420px;
+    }    
+      .overMapElement::after {
+        right: 420px;
+    }    
+      .overMapElement:hover::before {
+        left: 400px;
+    }    
+      .overMapElement:hover::after {
+        right: 400px;
+    } 
+
+  }
 @media (min-width: 1400px) {
   #back-to-top {
     border-color: #85C3DC;
@@ -603,7 +834,20 @@ ul, ol {
     #back-to-top:hover {
       background-color: #85C3DC; }
       #back-to-top:hover:after {
-        background-image: url("../img/arrow.png"); } }
+        background-image: url("../img/arrow.png"); } 
+        .overMapElement::before {
+          left: 500px;
+      }    
+        .overMapElement::after {
+          right: 500px;
+      }    
+        .overMapElement:hover::before {
+          left: 480px;
+      }    
+        .overMapElement:hover::after {
+          right: 480px;
+      } 
+      }
 @media (min-width: 1920px) {
   #intro-slider img {
     max-width: none;

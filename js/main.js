@@ -1,3 +1,5 @@
+localStorage.setItem("id",'1')
+
 $.ajax({
     url: 'https://raw.githubusercontent.com/Danilovesovic/shop/master/shop.json',
     type: 'get',
