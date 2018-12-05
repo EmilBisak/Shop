@@ -14,7 +14,6 @@ id = JSON.parse(id);
 
 let imgSrc = "product".concat(id)
 let text = '';
-console.log(imgSrc);
 
 
 
@@ -24,7 +23,6 @@ $.ajax({
     dataType: 'json',
   })
   .done(function(res) {
-    // console.log(res);
     res.forEach(function(el) {
       if (el.imgSrc === imgSrc) {
         text += template.replace('{{imgSrc}}', el.imgSrc)
@@ -46,8 +44,6 @@ $.ajax({
       addTocart(res)
 
     })
-
-
   })
 
 function addTocart(res) {

@@ -1,4 +1,5 @@
 localStorage.setItem("id",'1')
+let images = $("divId span")
 
 $.ajax({
     url: 'https://raw.githubusercontent.com/Danilovesovic/shop/master/shop.json',
@@ -23,20 +24,14 @@ let sliderH = $('[data-hide="this"]');
 let shopBag = $('.shopCart');
 
 
-
-
-
 function cartCounter() {
   let buyCounter = localStorage.getItem("buyCounter");
   buyCounter = JSON.parse(buyCounter);
   $(shopBag).html(buyCounter);
 }
 
-
-
 function liveSearch(res) {
   searchInput.on('keyup', function(e) {
-    console.log(searchInput);
     if (this.value.length >= 3) {
       sliderH.hide('400', function() {});
 
@@ -53,8 +48,6 @@ function liveSearch(res) {
     }
   });
 }
-
-
 
 function filterCat(res) {
   catBtns.on('click', function(event) {
@@ -123,6 +116,71 @@ function addId() {
     localStorage.id = JSON.stringify(id);
   })
   })
+}
+
+$('#toTop').on('click', function (event) {
+
+  var target = $(this.getAttribute('href'));
+  if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+
+          scrollTop: target.offset().top
+      }, 1000);
+  }
+
+});
+
+
+$('#back-to-top').on('click', function (event) {
+
+  var target = $(this.getAttribute('href'));
+  if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 1000);
+  }
+
+});
+
+$('.overMapElement').on('click', function (e) {
+  this.style.display = "none"
+})
+
+
+var mapCover = $(".overMapElement")
+if (innerWidth <= 768) {
+  mapCover.css("display", "none");
+}
+
+window.addEventListener('resize', () => {
+  if (innerWidth <= 768) {
+      mapCover.css("display", "none");
+  } else {
+      mapCover.css("display", "block");
+
+  }
+
+})
+for (var i = 0; i < images.length; i++) {
+  images[i].onmouseover = function () {
+      this.style.cursor = 'hand';
+      this.style.borderColor = '#afafaf';
+  }
+  images[i].onmouseout = function () {
+      this.style.cursor = 'pointer';
+      this.style.borderColor = '#ddd';
+  }
+}
+
+function changeImageOnClick(event) {
+  event = event || window.event;
+  var targetElement = event.target || event.srcElement;
+
+  if (targetElement.tagName == "IMG") {
+      mainImage.src = targetElement.getAttribute("src");
+  }
 }
 
 
